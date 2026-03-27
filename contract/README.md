@@ -1,22 +1,118 @@
-# Soroban Project
+# 📦 Supply Matching Smart Contract (Soroban)
 
-## Project Structure
+## 🔹 Project Description
 
-This repository uses the recommended structure for a Soroban project:
+This project is a decentralized **Supply Matching System** built using **Soroban smart contracts on the Stellar network**. It provides a trustless platform where suppliers and demanders can register their supply and demand directly on-chain, eliminating the need for intermediaries.
 
-```text
+The system is designed to be simple, transparent, and easily extendable for real-world applications such as food distribution, logistics, and resource allocation.
+
+---
+
+## ⚙️ What It Does
+
+This smart contract enables:
+
+* 📥 **Suppliers** to list items along with available quantities
+* 📤 **Demanders** to request specific items and quantities
+* 🔄 **Automated Matching** between supply and demand based on item type
+
+All operations are executed on-chain, ensuring:
+
+* Data integrity
+* Transparency
+* Decentralized control
+
+The contract currently performs **basic matching** by comparing item types and pairing suppliers with demanders.
+
+---
+
+## ✨ Features
+
+### 📌 Decentralized Supply & Demand Registration
+
+Users can independently add supply and demand entries directly to the blockchain.
+
+### 🔍 Basic Matching Engine
+
+Matches suppliers and demanders based on:
+
+* Item type
+* Available vs required quantity
+
+### 📊 On-Chain Storage
+
+All supply and demand data is stored securely on-chain using Soroban storage.
+
+### 🔗 Trustless System
+
+No central authority is required — the smart contract handles all logic.
+
+### ⚡ Lightweight & Extendable
+
+Designed with simplicity in mind, making it easy to extend with advanced features.
+
+---
+
+## 🚀 Future Improvements
+
+This is a foundational implementation. Potential upgrades include:
+
+* 💰 **Price-based matching system**
+* 📦 **Partial fulfillment of orders**
+* 💸 **Token-based payments (Stellar assets like USDC)**
+* ⭐ **User reputation and rating system**
+* ⚙️ **Optimized matching algorithms (priority queues, sorting, etc.)**
+* 🌐 **Frontend integration (React + Stellar Wallet)**
+
+---
+
+## 🛠️ Tech Stack
+
+* **Soroban** (Stellar Smart Contracts)
+* **Rust**
+* **Stellar CLI**
+
+---
+
+## 📁 Project Structure
+
+```
 .
-├── contracts
-│   └── hello_world
-│       ├── src
-│       │   ├── lib.rs
-│       │   └── test.rs
-│       └── Cargo.toml
-├── Cargo.toml
-└── README.md
+├── src/
+│   └── lib.rs        # Smart contract logic
+├── Cargo.toml        # Rust dependencies
+└── README.md         # Project documentation
 ```
 
-- New Soroban contracts can be put in `contracts`, each in their own directory. There is already a `hello_world` contract in there to get you started.
-- If you initialized this project with any other example contracts via `--with-example`, those contracts will be in the `contracts` directory as well.
-- Contracts should have their own `Cargo.toml` files that rely on the top-level `Cargo.toml` workspace for their dependencies.
-- Frontend libraries can be added to the top-level directory as well. If you initialized this project with a frontend template via `--frontend-template` you will have those files already included.
+---
+
+## ▶️ How to Use
+
+1. **Deploy the contract** using Stellar CLI
+2. Call functions:
+
+   * `add_supply()` → Register supply
+   * `add_demand()` → Register demand
+   * `match_supply()` → Retrieve matches
+
+---
+
+## 💡 Use Cases
+
+* 🍲 Food supply chain optimization
+* 🚚 Logistics and inventory matching
+* 🏭 Manufacturing resource allocation
+* 🛒 Decentralized marketplaces
+
+---
+
+## 📜 License
+
+This project is open-source and available for modification and distribution.
+
+---
+
+## 🤝 Contribution
+
+Feel free to fork the repository and improve the system with advanced matching logic, UI, or real-world integrations.
+
